@@ -41,7 +41,7 @@ def update_position(grasshoppers):
 
 # Update grasshopper positions
 new_grasshoppers = update_position(grasshoppers)
-
+np.set_printoptions(precision=1, suppress=True)
 # Print initial and updated positions
 print("Initial Grasshopper Positions:")
 print(grasshoppers)
