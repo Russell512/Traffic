@@ -49,6 +49,7 @@ def update_position(grasshoppers, t, T, c_min, c_max, phi):
     return new_positions
 
 # Perform iterations
+#變數只有t(number of iteration)
 for t in range(T):
     new_grasshoppers = update_position(grasshoppers, t, T, c_min, c_max, phi)
     grasshoppers = new_grasshoppers
