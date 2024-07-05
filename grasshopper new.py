@@ -18,9 +18,11 @@ grasshoppers = np.random.uniform(lower_bound, upper_bound, (N, K))
 # grasshoppers = 論文中的S(all solutions)
 # S = {s1,s2,...,sn} 代表n隻grasshopper(n 個solution)
 
+
 def w(r):
     """Weight function for social interaction."""
     return f * np.exp(-r / l) - np.exp(-r)
+
 
 def calculate_c(t, T, c_min, c_max, phi):
     """Calculate the parameter c based on the current iteration."""
@@ -29,12 +31,15 @@ def calculate_c(t, T, c_min, c_max, phi):
     else:
         return c_max - (c_max - c_min) * (t / T)
 
+
 def update_position(grasshoppers, t, T, c_min, c_max, phi):
     """Update positions of grasshoppers based on social interaction."""
     c = calculate_c(t, T, c_min, c_max, phi)
-    new_positions = np.zeros_like(grasshoppers)  # creates an array of zeros with the same shape as solutions.
+    # creates an array of zeros with the same shape as solutions.
+    new_positions = np.zeros_like(grasshoppers)
     for i in range(N):  # iterates over each solution.(先挑一個solution，每run一次這個loop就更新一隻grasshopper的位置)
-        for k in range(K):  # iterates over each phases(dimensions)(每run一次這個loop就更新一隻grasshopper的一個phase)
+        # iterates over each phases(dimensions)(每run一次這個loop就更新一隻grasshopper的一個phase)
+        for k in range(K):
             # sigma 開始
             interaction_sum = 0  # sigma 的結果
             for j in range(N):
@@ -45,18 +50,22 @@ def update_position(grasshoppers, t, T, c_min, c_max, phi):
                     d_hat_ij = (grasshoppers[j, k] - grasshoppers[i, k]) / d_ij
                     interaction_sum += w(d_ij) * d_hat_ij
             # sigma 結束
-            new_positions[i, k] = c**2 * ((upper_bound - lower_bound) / 2) * interaction_sum
+            new_positions[i, k] = c**2 * \
+                ((upper_bound - lower_bound) / 2) * interaction_sum
     return new_positions
 
+
+# print initial
+np.set_printoptions(precision=3, suppress=True)
+print("Initial Grasshopper Positions:")
+print(grasshoppers)
+
 # Perform iterations
-#變數只有t(number of iteration)
 for t in range(T):
     new_grasshoppers = update_position(grasshoppers, t, T, c_min, c_max, phi)
     grasshoppers = new_grasshoppers
 
-np.set_printoptions(precision=1, suppress=True)
-# Print initial and updated positions
-print("Initial Grasshopper Positions:")
-print(grasshoppers)
+
+# Print  updated positions
 print("\nUpdated Grasshopper Positions:")
 print(new_grasshoppers)
