@@ -1,7 +1,7 @@
 # Traffic
 
 ## gwgo.py-1st 2024/7/10
-line 5\sim14: 定義Solution類別, 包含position和value<br/>
+line 5~14: 定義Solution類別, 包含position和value<br/>
 &emsp;&emsp; position即包含每個phase的duration<br/>
 &emsp;&emsp; value是objective value, 以現在這程式是愈低愈好。以update_objective_value方法更新此評分 (如line 68和line 100), 未來套用SUMO模型結果計算分數<br/>
 <br/>
