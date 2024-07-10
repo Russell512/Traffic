@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="simple_net.net.xml"/>
+        <route-files value="simple_route.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="10000"/> <!-- 將模擬結束時間設置為10000秒 -->
+    </time>
+</configuration>
