@@ -1,0 +1,18 @@
+
+<configuration>
+    <input>
+        <net-file value="final.net.xml"/>
+        <route-files value="final.rou.xml"/>
+    </input>
+
+
+    <output>
+        <fcd-output value="vehicle_positions.xml"/>
+    </output>
+
+
+    <time>
+        <begin value="0"/>
+        <end value="10000"/> <!-- 將模擬結束時間設置為10000秒 -->
+    </time>
+</configuration>
