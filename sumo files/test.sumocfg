@@ -7,7 +7,7 @@
 
 
     <output>
-        <full-output value="fulloutput.xml"/>
+        <tripinfo-output value="tripinfo.xml"/>
     </output>
 
 
