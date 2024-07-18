@@ -7,12 +7,12 @@
 
 
     <output>
-        <fcd-output value="vehicle_positions.xml"/>
+        <full-output value="fulloutput.xml"/>
     </output>
 
 
     <time>
         <begin value="0"/>
-        <end value="10000"/> <!-- 將模擬結束時間設置為10000秒 -->
+        <end value="200"/> <!-- 將模擬結束時間設置為10000秒 -->
     </time>
 </configuration>
