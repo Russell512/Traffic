@@ -1,0 +1,19 @@
+
+<configuration>
+    <input>
+        <net-file value="final.net.xml"/>
+        <route-files value="final.rou.xml"/>
+        <additional-files value="tls.xml"/>
+    </input>
+
+
+    <output>
+        <full-output value="fulloutput.xml"/>
+    </output>
+
+
+    <time>
+        <begin value="0"/>
+        <end value="200"/> <!-- 將模擬結束時間設置為10000秒 -->
+    </time>
+</configuration>
