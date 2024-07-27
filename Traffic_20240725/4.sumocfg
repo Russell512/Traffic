@@ -1,0 +1,18 @@
+<configuration>
+    <input>
+        <net-file value="4.net.xml" />
+        <route-files value="final.rou.xml" />
+    </input>
+
+
+    <output>
+        <tripinfo-output value="tripinfo.xml" />
+        <fcd-output value="fcd.xml" />
+    </output>
+
+
+    <time>
+        <begin value="0" />
+        <end value="200" />
+    </time>
+</configuration>

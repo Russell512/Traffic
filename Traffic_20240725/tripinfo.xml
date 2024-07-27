@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-25 21:44:15 by Eclipse SUMO GUI Version 1.20.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="4.net.xml"/>
+        <route-files value="final.rou.xml"/>
+    </input>
+
+    <output>
+        <fcd-output value="fcd.xml"/>
+        <tripinfo-output value="tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="200"/>
+    </time>
+
+    <traci_server>
+        <remote-port value="50616"/>
+    </traci_server>
+
+    <gui_only>
+        <quit-on-end value="true"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+    <tripinfo id="veh3" depart="100.00" departLane="D4_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="144.00" arrivalLane="D5_0" arrivalPos="100.00" arrivalSpeed="14.24" duration="44.00" routeLength="595.72" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="4.30" rerouteNo="0" devices="tripinfo_veh3 fcd_veh3" vType="CarA" speedFactor="1.08" vaporized=""/>
+    <tripinfo id="veh0" depart="100.00" departLane="D2_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="146.00" arrivalLane="D7_0" arrivalPos="100.00" arrivalSpeed="13.57" duration="46.00" routeLength="595.36" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="4.79" rerouteNo="0" devices="tripinfo_veh0 fcd_veh0" vType="CarA" speedFactor="1.06" vaporized=""/>
+    <tripinfo id="veh6" depart="100.00" departLane="D6_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="146.00" arrivalLane="D3_0" arrivalPos="100.00" arrivalSpeed="13.49" duration="46.00" routeLength="595.72" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="4.73" rerouteNo="0" devices="tripinfo_veh6 fcd_veh6" vType="CarA" speedFactor="1.05" vaporized=""/>
+    <tripinfo id="veh9" depart="100.00" departLane="D8_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="156.00" arrivalLane="D1_0" arrivalPos="99.84" arrivalSpeed="11.73" duration="56.00" routeLength="595.62" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="5.73" rerouteNo="0" devices="tripinfo_veh9 fcd_veh9" vType="CarA" speedFactor="0.86" vaporized=""/>
+    <tripinfo id="veh12" depart="109.00" departLane="D2_0" departPos="7.60" departSpeed="0.00" departDelay="9.00" arrival="156.00" arrivalLane="D7_0" arrivalPos="100.00" arrivalSpeed="14.37" duration="47.00" routeLength="592.86" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="5.95" rerouteNo="0" devices="tripinfo_veh12 fcd_veh12" vType="CarB" speedFactor="1.05" vaporized=""/>
+    <tripinfo id="veh18" depart="109.00" departLane="D6_0" departPos="7.60" departSpeed="0.00" departDelay="9.00" arrival="160.00" arrivalLane="D3_0" arrivalPos="100.00" arrivalSpeed="12.69" duration="51.00" routeLength="593.22" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="5.25" rerouteNo="0" devices="tripinfo_veh18 fcd_veh18" vType="CarB" speedFactor="0.94" vaporized=""/>
+    <tripinfo id="veh15" depart="109.00" departLane="D4_0" departPos="7.60" departSpeed="0.00" departDelay="9.00" arrival="161.00" arrivalLane="D5_0" arrivalPos="100.00" arrivalSpeed="12.83" duration="52.00" routeLength="593.22" waitingTime="0.00" waitingCount="0" stopTime="0.00" timeLoss="5.48" rerouteNo="0" devices="tripinfo_veh15 fcd_veh15" vType="CarB" speedFactor="0.93" vaporized=""/>
+</tripinfos>
