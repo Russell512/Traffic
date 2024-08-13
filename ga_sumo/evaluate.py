@@ -1,25 +1,18 @@
 import xml.etree.ElementTree as ET
-from configuration import SIM_TIME
+from configuration import VEHICLES, SIM_TIME
 
 class ObjectValue:
-    def __init__(self, net_path, rou_path, add_path, sumocfg_path, tripinfo_path, fcd_path):
-        # net_xml = ET.parse(net_path)        # Cr()
-        rou_xml = ET.parse(rou_path)        # Total number of vehicles
+    def __init__(self, add_path, tripinfo_path, fcd_path):
         add_xml = ET.parse(add_path)        # Cr()
-        # sumocfg = ET.parse(sumocfg_path)    # simulationTime()
         tripinfo_xml = ET.parse(tripinfo_path)  # journeyTime()
         fcd_xml = ET.parse(fcd_path)        # Floating Car Data (FCD) # waitingTime()
         
-        # self.net = net_xml.getroot()
-        self.routes = rou_xml.getroot()
         self.additional = add_xml.getroot()
-        # self.configuration = sumocfg.getroot()
         self.tripinfos = tripinfo_xml.getroot()
         self.fcd = fcd_xml.getroot()
         
         self.V = len(self.tripinfos.findall('tripinfo'))
-        self.C = len(self.routes.findall('vehicle')) - self.V
-        # self.simulation_time = float(self.configuration.find('.//time/end').get('value'))
+        self.C = VEHICLES - self.V
 
     # Calculate the total journey time of all vehicles that arrive their destination
     def journeyTime(self):
@@ -47,7 +40,3 @@ class ObjectValue:
     
     def evaluate(self):
         return (self.journeyTime() + self.waitingTime() + self.C * SIM_TIME) / (self.V ** 2 + self.Cr())
-
-if __name__ == '__main__':
-    obj = ObjectValue('final.net.xml', 'final.rou.xml', 'final.add.xml', 'test.sumocfg', 'tripinfo.xml', 'fcd.xml')
-    print(obj.evaluate())
