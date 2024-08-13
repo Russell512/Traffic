@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<additional>
+    <tlLogic id="3" type="static" programID="tls" offset="0">
+        <phase duration="22" state="rrrGGGGGGGGGggg"/>
+        <phase duration="5"  state="rrryyyyyyGGGggg"/>
+        <phase duration="5" state="rrrrrrrrrGGGGGG"/>
+        <phase duration="5"  state="rrrrrrrrryyyyyy"/>
+        <phase duration="15" state="GGGGGGrrrrrrrrr"/>
+        <phase duration="5"  state="yyyGGGrrrrrrrrr"/>
+    </tlLogic>
+    <tlLogic id="6" type="static" programID="tls" offset="0">
+        <phase duration="25" state="GGGggrrrGGGG"/>
+        <phase duration="5"  state="GGGggrrryyyy"/>
+        <phase duration="5"  state="GGGGGrrrrrrr"/>
+        <phase duration="5"  state="yyyyyrrrrrrr"/>
+        <phase duration="10" state="rrrrrGGGGrrr"/>
+        <phase duration="5"  state="rrrrryyyGrrr"/>
+    </tlLogic>
+</additional>
