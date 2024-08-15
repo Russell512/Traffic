@@ -1,0 +1,20 @@
+
+<configuration>
+    <input>
+        <net-file value="hamasing.net.xml"/>
+        <route-files value="hamasing.rou.xml"/>
+        <additional-files value="hamasing.add.xml"/>
+    </input>
+
+
+    <output>
+        <tripinfo-output value="hamasing.tripinfo.xml" />
+        <fcd-output value="hamasing.fcd.xml" />
+    </output>
+
+
+    <time>
+        <begin value="0"/>
+        <end value="500"/>
+    </time>
+</configuration>
