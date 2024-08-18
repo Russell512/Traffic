@@ -1,0 +1,20 @@
+
+<configuration>
+    <input>
+        <net-file value="rs.net.xml"/>
+        <route-files value="rs.rou.xml"/>
+        <additional-files value="rs.add.xml"/>
+    </input>
+
+
+    <output>
+        <tripinfo-output value="rs.tripinfo.xml" />
+        <fcd-output value="rs.fcd.xml" />
+    </output>
+
+
+    <time>
+        <begin value="0"/>
+        <end value="500"/>
+    </time>
+</configuration>
