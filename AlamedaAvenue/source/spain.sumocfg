@@ -1,0 +1,20 @@
+
+<configuration>
+    <input>
+        <net-file value="spain.net.xml"/>
+        <route-files value="spain.rou.xml"/>
+        <additional-files value="spain.add.xml"/>
+    </input>
+
+
+    <output>
+        <tripinfo-output value="spain.tripinfo.xml" />
+        <fcd-output value="spain.fcd.xml" />
+    </output>
+
+
+    <time>
+        <begin value="0"/>
+        <end value="500"/>
+    </time>
+</configuration>
