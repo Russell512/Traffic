@@ -40,9 +40,7 @@ class GO():
             for j in range(self.N):
                 if i != j:
                     d_ij = np.abs(self.solutions[j].duration[k] - si.duration[k])
-                    if d_ij == 0:
-                        d_ij = 1e-8
-                    d_hat_ij = (self.solutions[j].duration[k] - si.duration[k]) / d_ij
+                    d_hat_ij = (self.solutions[j].duration[k] - si.duration[k]) / (d_ij + 1e-10)
                     interaction_sum += self.w(d_ij) * d_hat_ij
             xi[k] = c**2 * (self.upper_bound - self.lower_bound) / 2 * interaction_sum
         return xi
@@ -60,9 +58,12 @@ class GO():
             print(f"\nIter {t+1:4d}/{self.max_iter}\t Time used: {time.time() - self.start:.2f} sec")
 
             c = self.calculate_c(t)
+            tmp_durations = []
             for i, si in enumerate(self.solutions):
                 
-                si.duration = self.Social_Interaction(i, si, c)
+                tmp_durations.append(self.Social_Interaction(i, si, c))
+            for i in range(self.N):
+                self.solutions[i].duration = tmp_durations[i]
 
             for i, si in enumerate(self.solutions):
                 si.duration = [int(round(d)) for d in si.duration]

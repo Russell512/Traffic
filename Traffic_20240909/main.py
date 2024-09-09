@@ -12,7 +12,7 @@ if __name__ == '__main__':
     max_iter = 10
     phi = 0.25
 
-    # go = GO(N=N, phase=PHASE, lower_bound=lower_bound, upper_bound=upper_bound, max_iter=max_iter, phi=phi, f=0.5, l=1.5, c_min=0.00001, c_max=1.0)
+    go = GO(N=N, phase=PHASE, lower_bound=lower_bound, upper_bound=upper_bound, max_iter=max_iter, phi=phi, f=0.5, l=1.5, c_min=0.00001, c_max=1.0)
    
     gwgo = GWGO(N=N, phase=PHASE, lower_bound=lower_bound, upper_bound=upper_bound, max_iter=max_iter, phi=phi, f=0.5, l=1.5, c_min=0.00001, c_max=1.0)
  
@@ -20,10 +20,10 @@ if __name__ == '__main__':
     gwo = GWO(N=N, phase=PHASE, lower_bound=lower_bound, upper_bound=upper_bound, max_iter=max_iter, phi=phi, c_min=0.00001, c_max=1.0)
     
 
-    # algorithms = [go, gwo, gwgo]
-    # names = ['GO', 'GWO', 'GWGO']
-    algorithms = [gwo, gwgo]
-    names = ['GWO', 'GWGO']
+    algorithms = [go, gwo, gwgo]
+    names = ['GO', 'GWO', 'GWGO']
+    # algorithms = [gwo, gwgo]
+    # names = ['GWO', 'GWGO']
     historys = []
 
     for i in range(len(algorithms)):
