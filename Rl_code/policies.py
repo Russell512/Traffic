@@ -295,14 +295,19 @@ class NCMultiAgentPolicy(Policy):
             p_i_ls = [] #這個list用來存個鄰居的fingerprint
             nx_i_ls = [] #這個則是鄰居的observation
             for j in range(n_n):
+                #p_i的這個list他存的是鄰居的fingerprint，但不是全都存，後面那個narrow會類似過濾出與i較為相關的pf
                 p_i_ls.append(p_i[j].narrow(0, 0, self.na_ls_ls[i][j]))
+                #nx也是，i可能只在乎某幾個環境特徵，其他就被過濾掉
                 nx_i_ls.append(nx_i[j].narrow(0, 0, self.ns_ls_ls[i][j]))
             p_i = torch.cat(p_i_ls).unsqueeze(0)
             nx_i = torch.cat(nx_i_ls).unsqueeze(0)
+            #這邊求的與i旁邊的環境，但是因為不identical所以也要抓維度
             x_i = x[i].narrow(0, 0, self.n_s_ls[i]).unsqueeze(0)
+            #下面的內容把上面的觀察值 (自身與鄰居環境、鄰居指紋、鄰居訊息) 丟進屬於i的fc_layers (所以後面有[i])
         s_i = [F.relu(self.fc_x_layers[i](torch.cat([x_i, nx_i], dim=1))),
                F.relu(self.fc_p_layers[i](p_i)),
                F.relu(self.fc_m_layers[i](m_i))]
+        #接起來，形成最後LSTM的輸入s_i
         return torch.cat(s_i, dim=1)
 
     def _get_neighbor_dim(self, i_agent):
