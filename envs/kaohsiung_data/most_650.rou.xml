@@ -1,0 +1,33 @@
+<routes>
+  <vType id="car" length="4" accel="5" decel="10" speedDev="0.1" minGap="8"/>
+  <flow id="f00" departPos="random_free" from="265614897#0" to="92071741#6" via="403863070#0 -272200697#3 -272200697#2 -272200697#1" begin="0" end="600" vehsPerHour="250" type="car"/>
+  <flow id="f01" departPos="random_free" from="265614897#0" to="-184383558#7" via="383026340#0" begin="0" end="600" vehsPerHour="250" type="car"/>
+  <flow id="f02" departPos="random_free" from="403863070#1" to="51005979#3" via="383026340#0" begin="0" end="600" vehsPerHour="290" type="car"/>
+  <flow id="f03" departPos="random_free" from="257245112#0" to="-184383555" via="383026340#0" begin="0" end="600" vehsPerHour="290" type="car"/>
+  <flow id="f04" departPos="random_free" from="-401959564#4" to="255537687#1" via="383026340#4" begin="0" end="600" vehsPerHour="290" type="car"/>
+  <flow id="f05" departPos="random_free" from="-88867314#4" to="35164001#0" via="383026340#1" begin="0" end="600" vehsPerHour="290" type="car"/>
+  <flow id="f06" departPos="random_free" from="-51005979#3" to="-265614897#0" via="383026348#0" begin="0" end="600" vehsPerHour="185" type="car"/>
+  <flow id="f07" departPos="random_free" from="296215789#0" to="-265614897#1" via="23506825 383026348#0 383026348#1 383026348#3" begin="0" end="600" vehsPerHour="185" type="car"/>
+  <flow id="f08" departPos="random_free" from="270585766#0" to="330465829#3" via="23506825 383026348#0 383026348#1 330465827#2" begin="0" end="600" vehsPerHour="295" type="car"/>
+  <flow id="f09" departPos="random_free" from="184383555" to="401959564#4" via="255537686#1" begin="0" end="600" vehsPerHour="295" type="car"/>
+  <flow id="f6010" departPos="random_free" from="265614897#0" to="92071741#6" via="403863070#0 -272200697#3 -272200697#2 -272200697#1" begin="601" end="3000" vehsPerHour="270" type="car"/>
+  <flow id="f6011" departPos="random_free" from="265614897#0" to="-184383558#7" via="383026340#0" begin="601" end="3000" vehsPerHour="270" type="car"/>
+  <flow id="f6012" departPos="random_free" from="403863070#1" to="51005979#3" via="383026340#0" begin="601" end="3000" vehsPerHour="305" type="car"/>
+  <flow id="f6013" departPos="random_free" from="257245112#0" to="-184383555" via="383026340#0" begin="601" end="3000" vehsPerHour="305" type="car"/>
+  <flow id="f6014" departPos="random_free" from="-401959564#4" to="255537687#1" via="383026340#4" begin="601" end="3000" vehsPerHour="305" type="car"/>
+  <flow id="f6015" departPos="random_free" from="-88867314#4" to="35164001#0" via="383026340#1" begin="601" end="3000" vehsPerHour="305" type="car"/>
+  <flow id="f6016" departPos="random_free" from="-51005979#3" to="-265614897#0" via="383026348#0" begin="601" end="3000" vehsPerHour="180" type="car"/>
+  <flow id="f6017" departPos="random_free" from="296215789#0" to="-265614897#1" via="23506825 383026348#0 383026348#1 383026348#3" begin="601" end="3000" vehsPerHour="180" type="car"/>
+  <flow id="f6018" departPos="random_free" from="270585766#0" to="330465829#3" via="23506825 383026348#0 383026348#1 330465827#2" begin="601" end="3000" vehsPerHour="340" type="car"/>
+  <flow id="f6019" departPos="random_free" from="184383555" to="401959564#4" via="255537686#1" begin="601" end="3000" vehsPerHour="340" type="car"/>
+  <flow id="f30010" departPos="random_free" from="265614897#0" to="92071741#6" via="403863070#0 -272200697#3 -272200697#2 -272200697#1" begin="3001" end="3600" vehsPerHour="210" type="car"/>
+  <flow id="f30011" departPos="random_free" from="265614897#0" to="-184383558#7" via="383026340#0" begin="3001" end="3600" vehsPerHour="210" type="car"/>
+  <flow id="f30012" departPos="random_free" from="403863070#1" to="51005979#3" via="383026340#0" begin="3001" end="3600" vehsPerHour="245" type="car"/>
+  <flow id="f30013" departPos="random_free" from="257245112#0" to="-184383555" via="383026340#0" begin="3001" end="3600" vehsPerHour="245" type="car"/>
+  <flow id="f30014" departPos="random_free" from="-401959564#4" to="255537687#1" via="383026340#4" begin="3001" end="3600" vehsPerHour="245" type="car"/>
+  <flow id="f30015" departPos="random_free" from="-88867314#4" to="35164001#0" via="383026340#1" begin="3001" end="3600" vehsPerHour="245" type="car"/>
+  <flow id="f30016" departPos="random_free" from="-51005979#3" to="-265614897#0" via="383026348#0" begin="3001" end="3600" vehsPerHour="155" type="car"/>
+  <flow id="f30017" departPos="random_free" from="296215789#0" to="-265614897#1" via="23506825 383026348#0 383026348#1 383026348#3" begin="3001" end="3600" vehsPerHour="155" type="car"/>
+  <flow id="f30018" departPos="random_free" from="270585766#0" to="330465829#3" via="23506825 383026348#0 383026348#1 330465827#2" begin="3001" end="3600" vehsPerHour="320" type="car"/>
+  <flow id="f30019" departPos="random_free" from="184383555" to="401959564#4" via="255537686#1" begin="3001" end="3600" vehsPerHour="320" type="car"/>
+</routes>
